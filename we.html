@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header and Navigation */
+        .header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 10rem 0;
+            position: relative;
+        }
+
+        #hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #34495e;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Service Cards */
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .card {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+        }
+
+        /* Form Styling */
+        #contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact-form button {
+            background-color: #34495e;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #contact-form button:hover {
+            background-color: #f39c12;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #34495e;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 1rem;
+            }
+
+            .nav-links.mobile-nav {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            #hero {
+                padding: 5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML Structure -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">MyWebsite</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-text">
+            <h1>Welcome</h1>
+            <h2>To</h2>
+            <h1>Indian Premiere League Registrations.</h1>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Our Mission is to Gather Best Players Among The World .</p>
+        <img src="C:\Users\admin\Downloads\indian-premier-league-ipl-official-260nw-2308551109.webp" alt="About Us Image" style="display: block; margin: 0 auto;"/>
+    </section>
+
+    <section id="services">
+        <h2>Player Details</h2>
+        <div class="service-cards">
+           
+            <div class="card">
+                <h3>Wicket-Keeper:</h3>
+                <p>Wicket Keeper-Batsman</p>
+                <img src="C:\Users\admin\Downloads\wcabd" style="width:300px;"/>
+            </div>
+            <div class="card">
+                <h3>Batting:</h3>
+                <p>Right/Left-Handed Batsman</p>
+                <img src="C:\Users\admin\Downloads\abde" style="width:250px;"/>
+            </div>
+            <div class="card">
+                <h3>Bowling:</h3>
+                <p>Right/Left-arm Fast Bowler</p>
+                <img src="C:\Users\admin\Downloads\starc" style="width:300px;"/>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        // JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile-nav');
+            });
+
+            // Contact Form Validation
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = event.target.name.value;
+                const email = event.target.email.value;
+                const message = event.target.message.value;
+
+                if (name === "" || email === "" || message === "") {
+                    alert('All fields are required!');
+                    return;
+                }
+
+                alert('Form submitted successfully!');
+                event.target.reset();  // Clears the form after submission
+            });
+        });
+    </script>
+</body>
+</html>
